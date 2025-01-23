@@ -1,0 +1,14 @@
+name: Push
+
+# on:
+#   push:
+#     tags:
+#       - "v*.*.*"
+
+on:
+  push
+
+jobs:
+  lint_all:
+    uses: ./.github/workflows/deploy.yml
+    secrets: inherit
