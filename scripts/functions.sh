@@ -7,7 +7,7 @@ DIR_DIST="$DIR_PARENT/dist"
 
 URL_TENABLE_AGENT="https://sensor.cloud.tenable.com/install/agent"
 
-HASH_LAST_KNOWN=66b5068d4b95b306f4e491c50ad4abb8149fef5c0c935c071dacfb2044d4fd25
+HASH_LAST_KNOWN=a08df5ceb8e9e6d0f1de1ac1009f86700c4322004728c1b8b19efd76b121ef60
 
 
 check_linking_key_is_set () {

@@ -38,3 +38,8 @@ if [[ "$status_code" -ne 200 ]] ; then
     echo "[!] Unable to download from Tenable... Exiting."
     exit 1
 fi
+
+
+echo "[*] Download successful..."
+sha256sum "$DIR_SRC/install_agent.sh" > "$DIR_SRC/install_agent.sh.sha256"
+echo "[*] $(cat "$DIR_SRC/install_agent.sh.sha256")"

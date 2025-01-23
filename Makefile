@@ -3,13 +3,13 @@ download:
 	echo "[*] Downloading the project..."
 	./scripts/download.sh
 
-customise:
-	echo "[*] Updating the project..."
-	./scripts/customise.sh
-
 verify:
 	echo "[*] Verifying the project..."
 	./scripts/verify.sh
+
+customise:
+	echo "[*] Updating the project..."
+	./scripts/customise.sh
 
 build:
 	echo "[*] Building the project..."
