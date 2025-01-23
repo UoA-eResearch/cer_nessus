@@ -16,9 +16,3 @@ fi
 
 AGENT_NAME="nectar_$INSTANCE_UUID"
 AGENT_GROUP="nectar_all"
-
-# Prompt user if they want to set a different agent group
-read -r -p "Do you want to set a different agent group? [y/N] " response
-if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]; then
-    read -r -p "Please enter the agent group: " AGENT_GROUP
-fi
