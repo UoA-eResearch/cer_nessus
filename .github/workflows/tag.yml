@@ -9,6 +9,6 @@ on:
   push
 
 jobs:
-  lint_all:
+  deploy:
     uses: ./.github/workflows/deploy.yml
     secrets: inherit

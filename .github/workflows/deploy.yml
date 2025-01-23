@@ -12,8 +12,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Update (download and check) installer script
-        run: make update
+      - name: Download installer script
+        run: make download
+
+      - name: Verify installer script
+        run: make verify
+
+      - name: Customise installer script
+        run: make customise
 
       - name: Build installer script
         run: make build

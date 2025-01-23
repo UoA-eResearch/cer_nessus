@@ -7,6 +7,8 @@ DIR_DIST="$DIR_PARENT/dist"
 
 URL_TENABLE_AGENT="https://sensor.cloud.tenable.com/install/agent"
 
+HASH_LAST_KNOWN=66b5068d4b95b306f4e491c50ad4abb8149fef5c0c935c071dacfb2044d4fd25
+
 
 check_linking_key_is_set () {
     echo "[*] Checking Tenable linking key existence..."

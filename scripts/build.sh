@@ -25,9 +25,9 @@ echo -e "#!/bin/bash\n" >> "$TARGET_INSTALLER_SCRIPT"
 echo "[+] Adding get_instance_uuid.sh to installer script..."
 tail -n +2 "$DIR_SRC/get_instance_uuid.sh" >> "$TARGET_INSTALLER_SCRIPT"
 
-# set_agent_tags.sh
-echo "[+] Adding set_agent_tags.sh to installer script..."
-tail -n +2 "$DIR_SRC/set_agent_tags.sh" >> "$TARGET_INSTALLER_SCRIPT"
+# set_vars.sh
+echo "[+] Adding set_vars.sh to installer script..."
+tail -n +2 "$DIR_SRC/set_vars.sh" >> "$TARGET_INSTALLER_SCRIPT"
 
 # install_agent.sh
 if [ ! -f "$DIR_SRC/install_agent.sh" ]; then
