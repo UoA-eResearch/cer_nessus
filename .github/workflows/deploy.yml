@@ -12,6 +12,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Update functions.sh with latest tag
+        run: |
+          LATEST_TAG=${{ github.ref_name }}
+          sed -i "s/^CER_NESSUS_VERSION=.*/CER_NESSUS_VERSION=$LATEST_TAG/" scripts/functions.sh
+
       - name: Download installer script
         run: make download
 

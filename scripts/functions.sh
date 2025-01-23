@@ -5,6 +5,8 @@ DIR_SCRIPTS="$DIR_PARENT/scripts"
 DIR_SRC="$DIR_PARENT/src"
 DIR_DIST="$DIR_PARENT/dist"
 
+CER_NESSUS_VERSION=""
+
 URL_TENABLE_AGENT="https://sensor.cloud.tenable.com/install/agent"
 
 HASH_LAST_KNOWN=a08df5ceb8e9e6d0f1de1ac1009f86700c4322004728c1b8b19efd76b121ef60

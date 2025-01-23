@@ -31,3 +31,7 @@ echo "[*] Normalising install_agent.sh script..."
 sed -i "s/$TENABLE_LINKING_KEY/\'\"\$LINKING_KEY\"\'/g" "$DIR_SRC/install_agent.sh"
 sed -i "s/AGENT_NAME/\'\"\$AGENT_NAME\"\'/g" "$DIR_SRC/install_agent.sh"
 sed -i "s/AGENT_GROUP/\'\"\$AGENT_GROUP\"\'/g" "$DIR_SRC/install_agent.sh"
+
+# Add a line to set the custom script install tag used
+echo "[*] Adding custom script install version to file..."
+echo -e "CER_NESSUS_VERSION=$CER_NESSUS_VERSION" >> "/opt/nessus_agent/version"
