@@ -1,9 +1,12 @@
 name: Push
 
+# on:
+#   push:
+#     tags:
+#       - "v*.*.*"
+
 on:
-  push:
-    tags:
-      - "v*.*.*"
+  push
 
 jobs:
   deploy:

@@ -39,3 +39,7 @@ fi
 echo "[+] Adding install_agent.sh to installer script..."
 echo -e "\n# install_agent.sh\n" >> "$TARGET_INSTALLER_SCRIPT"
 tail -n +2 "$DIR_SRC/install_agent.sh" >> "$TARGET_INSTALLER_SCRIPT"
+
+# Add a line to set the custom script install tag used
+echo "[+] Adding custom script install version to file..."
+echo "CER_NESSUS_VERSION=$CER_NESSUS_VERSION" | sudo tee -a "/opt/nessus_agent/version"
