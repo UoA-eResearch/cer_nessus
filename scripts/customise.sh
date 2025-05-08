@@ -25,9 +25,3 @@ if [ ! -f "$DIR_SRC/install_agent.sh" ]; then
     echo "[!] install_agent.sh script not found... Exiting."
     exit 1
 fi
-
-# Replace instance of the linking key to TENABLE_LINKING_KEY placeholder
-echo "[*] Normalising install_agent.sh script..."
-sed -i "s/$TENABLE_LINKING_KEY/\'\"\$LINKING_KEY\"\'/g" "$DIR_SRC/install_agent.sh"
-sed -i "s/AGENT_NAME/\'\"\$AGENT_NAME\"\'/g" "$DIR_SRC/install_agent.sh"
-sed -i "s/AGENT_GROUP/\'\"\$AGENT_GROUP\"\'/g" "$DIR_SRC/install_agent.sh"

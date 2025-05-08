@@ -9,7 +9,7 @@ CER_NESSUS_VERSION=""
 
 URL_TENABLE_AGENT="https://sensor.cloud.tenable.com/install/agent"
 
-HASH_LAST_KNOWN=a08df5ceb8e9e6d0f1de1ac1009f86700c4322004728c1b8b19efd76b121ef60
+HASH_LAST_KNOWN=a9ca24ba3a5cc4e2add4ebd856e504b4e60491aa83cb0409007bd20f539b2762
 
 
 check_linking_key_is_set () {
