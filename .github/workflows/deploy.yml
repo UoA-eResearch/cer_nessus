@@ -1,4 +1,4 @@
-name: Deploy GitHub Pages
+name: Deploy
 
 on: workflow_call
 
@@ -16,9 +16,6 @@ jobs:
         run: |
           LATEST_TAG=${{ github.ref_name }}
           sed -i "s/^CER_NESSUS_VERSION=.*/CER_NESSUS_VERSION=$LATEST_TAG/" scripts/functions.sh
-
-      - name: Download installer script
-        run: make download
 
       - name: Verify installer script
         run: make verify
