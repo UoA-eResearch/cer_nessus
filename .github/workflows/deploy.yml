@@ -20,9 +20,6 @@ jobs:
       - name: Verify installer script
         run: make verify
 
-      - name: Customise installer script
-        run: make customise
-
       - name: Build installer script
         run: make build
 

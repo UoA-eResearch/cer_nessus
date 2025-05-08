@@ -11,10 +11,6 @@ version:
 	LATEST_TAG=$(git describe --tags --abbrev=0)
 	sed -i "s/^CER_NESSUS_VERSION=.*/CER_NESSUS_VERSION=${LATEST_TAG}/" scripts/functions.sh
 
-customise:
-	echo "[*] Updating the project..."
-	./scripts/customise.sh
-
 build:
 	echo "[*] Building the project..."
 	./scripts/build.sh
