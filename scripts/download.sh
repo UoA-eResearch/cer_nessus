@@ -41,5 +41,14 @@ fi
 
 
 echo "[*] Download successful..."
-sha256sum "$DIR_SRC/install_agent.sh" > "$DIR_SRC/install_agent.sh.sha256"
-echo "[*] $(cat "$DIR_SRC/install_agent.sh.sha256")"
+
+# Replace instance of the linking key to TENABLE_LINKING_KEY placeholder
+echo "[*] Normalising install_agent.sh script..."
+sed -i "s/$TENABLE_LINKING_KEY/\'\"\$LINKING_KEY\"\'/g" "$DIR_SRC/install_agent.sh"
+sed -i "s/AGENT_NAME/\'\"\$AGENT_NAME\"\'/g" "$DIR_SRC/install_agent.sh"
+sed -i "s/AGENT_GROUP/\'\"\$AGENT_GROUP\"\'/g" "$DIR_SRC/install_agent.sh"
+
+# Hash file
+cd "$DIR_SRC" || exit 1
+sha256sum "install_agent.sh" > "install_agent.sh.sha256"
+echo "[*] $(cat "install_agent.sh.sha256")"
