@@ -13,7 +13,13 @@ sudo ./install.sh
 You will be prompted for:
 
 - Tenable linking key (from Secret Server `eResearch > Nectar > Tenable linking key`)
-- Additional agent group name (press enter to skip)
+
+## Uninstalling Nessus
+
+```
+sudo apt remove -y --purge nessusagent
+sudo rm -rf /opt/nessus_agent
+```
 
 ## Updating Project
 

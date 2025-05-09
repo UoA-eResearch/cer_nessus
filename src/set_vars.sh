@@ -19,12 +19,3 @@ AGENT_NAME="nectar_$INSTANCE_UUID"
 
 # Set agent group
 AGENT_GROUP="nectar_all"
-
-echo "[!] Agent group is set to default: nectar_all"
-read -rp "[!] Would you like to add an additional group? (y/N) " yn
-
-if [[ "$yn" =~ ^[Yy]$ ]]; then
-    read -r -p "[*] Enter the group name you would like to add: " ADDITIONAL_GROUP
-    AGENT_GROUP="nectar_all,$ADDITIONAL_GROUP"
-    echo "[*] Updated agent group: $AGENT_GROUP"
-fi
