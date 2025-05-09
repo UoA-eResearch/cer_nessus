@@ -1,34 +1,19 @@
 # cer_nessus
 
-Easy Tenable Nessus agent installer for CeR
+Easier Tenable Nessus agent installer for CeR
 
-## Automated
-
-```
-curl -o- https://uoa-eresearch.github.io/cer_nessus/install.sh | bash
-```
-
-## Manual
-
-- More secure, as you can review script contents before execution
-- User prompted for `LINKING_KEY` when run
-- Option to change the `AGENT_GROUP` (comma-separated list without spaces)
+## Quickstart
 
 ```
-curl -sf -L https://uoa-eresearch.github.io/cer_nessus/install.sh -o install.sh
-less install.sh
+curl -o install.sh https://uoa-eresearch.github.io/cer_nessus/install.sh
 chmod u+x install.sh
-bash install.sh
+sudo ./install.sh
 ```
 
-## Uninstall
+You will be prompted for:
 
-### Debian-based
-
-```
-sudo apt remove -y --purge nessusagent
-sudo rm -rf /opt/nessus_agent
-```
+- Tenable linking key (from Secret Server `eResearch > Nectar > Tenable linking key`)
+- Additional agent group name (press enter to skip)
 
 ## Updating Project
 
