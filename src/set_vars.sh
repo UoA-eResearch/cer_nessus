@@ -25,7 +25,7 @@ if [ -z "$AGENT_GROUP" ]; then
 fi
 
 # Check agent group starts with nectar_
-if [[ ! "$AGENT_GROUP" =~ ^nectar_ ]]; then
-    echo "[!] Agent group must start with 'nectar_'"
+if [[ ! "$AGENT_GROUP" =~ ^(nectar_|cer_|sre_) ]]; then
+    echo "[!] Agent group must start with 'nectar_', 'cer_', or 'sre_'"
     exit 1
 fi
