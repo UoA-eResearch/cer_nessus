@@ -17,5 +17,15 @@ fi
 # Set agent name
 AGENT_NAME="nectar_$INSTANCE_UUID"
 
-# Set agent group
-AGENT_GROUP="nectar_all"
+# Check if AGENT_NAME is set in env vars
+# If not, ask user to enter it
+if [ -z "$AGENT_GROUP" ]; then
+    echo "[!] Agent group is not set..."
+    read -r -p "Please enter: " AGENT_GROUP
+fi
+
+# Check agent group starts with nectar_
+if [[ ! "$AGENT_GROUP" =~ ^nectar_ ]]; then
+    echo "[!] Agent group must start with 'nectar_'"
+    exit 1
+fi
