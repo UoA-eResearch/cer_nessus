@@ -10,7 +10,7 @@ jobs:
     env:
       TENABLE_LINKING_KEY: ${{ secrets.TENABLE_LINKING_KEY }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Update functions.sh with latest tag
         run: |
